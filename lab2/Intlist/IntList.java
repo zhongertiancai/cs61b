@@ -97,6 +97,9 @@ public class IntList {
      * * elements of B.  May NOT modify items of A.  Use 'new'.
      */
     public static IntList catenate(IntList A, IntList B) {
+        if (A == null){
+            return B;
+        }
         IntList p1 = A.rest;
         IntList C = new IntList();
         IntList p2 = C, tmp;
