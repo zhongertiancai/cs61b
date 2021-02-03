@@ -72,9 +72,4 @@ public class Planet{
 	public void draw(){
 		StdDraw.picture(xxPos, yyPos, "images/" + imgFileName);
 	}
-	private void printout(){
-		StdOut.printf("%11.4e %11.4e %11.4e %11.4e %11.4e %12s\n",
-            xxPos, yyPos, xxVel,
-            yyVel, mass, imgFileName);   
-	}
 }
