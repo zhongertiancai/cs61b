@@ -4,7 +4,7 @@ public class Planet{
 	public double xxVel;
 	public double yyVel;
 	public double mass;
-	public static double G=6.67e-11;
+	private static double G=6.67e-11;
 	String imgFileName;
 	public Planet(double xP, double yP, double xV,
 		double yV, double m, String img){
@@ -72,7 +72,7 @@ public class Planet{
 	public void draw(){
 		StdDraw.picture(xxPos, yyPos, "images/" + imgFileName);
 	}
-	public void printout(){
+	private void printout(){
 		StdOut.printf("%11.4e %11.4e %11.4e %11.4e %11.4e %12s\n",
             xxPos, yyPos, xxVel,
             yyVel, mass, imgFileName);   

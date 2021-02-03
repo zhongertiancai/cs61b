@@ -23,13 +23,9 @@ public class NBody{
 		return result;
 	}
 	public static void main(String[] arg){
-		Scanner sc=new Scanner(System.in);  
-		String s1 = sc.next();
-		String s2 = sc.next();
-		String s3 = sc.next();
-		double T = Double.parseDouble(s1);
-		double dt = Double.parseDouble(s2);
-		String filename = s3; 
+		double T = Double.parseDouble(arg[0]);
+		double dt = Double.parseDouble(arg[1]);
+		String filename = arg[2]; 
 		double radius = readRadius(filename);
 		StdDraw.setScale(-radius,radius);
 		StdDraw.clear();
