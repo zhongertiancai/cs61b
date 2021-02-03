@@ -1,10 +1,10 @@
 public class Planet{
-	double xxPos;
-	double yyPos;
-	double xxVel;
-	double yyVel;
-	double mass;
-	static double G=6.67e-11;
+	private double xxPos;
+	private double yyPos;
+	private double xxVel;
+	private double yyVel;
+	private double mass;
+	private static double G=6.67e-11;
 	String imgFileName;
 	public Planet(double xP, double yP, double xV,
 		double yV, double m, String img){
@@ -38,7 +38,7 @@ public class Planet{
 	public double calcForceExertedByY(Planet rocinate){
 		return calcForceExertedBy(rocinate)/calcDistance(rocinate)*(rocinate.yyPos-yyPos);
 	}
-	public boolean equals(Planet rocinate){
+	private boolean equals(Planet rocinate){
 		if(xxPos == rocinate.xxPos && yyPos == rocinate.yyPos){
 			return true;
 		}else{
@@ -71,5 +71,10 @@ public class Planet{
 	}
 	public void draw(){
 		StdDraw.picture(xxPos, yyPos, "images/" + imgFileName);
+	}
+	public void printout(){
+		StdOut.printf("%11.4e %11.4e %11.4e %11.4e %11.4e %12s\n",
+            xxPos, yyPos, xxVel,
+            yyVel, mass, imgFileName);   
 	}
 }

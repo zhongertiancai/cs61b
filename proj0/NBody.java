@@ -10,7 +10,6 @@ public class NBody{
 		In in = new In(s);
 		int firstItemInFile = in.readInt();
 		Planet[] result = new Planet[firstItemInFile];
-		System.out.println(firstItemInFile);
 		double secondItemInFile = in.readDouble();
 		for(int i = 0; i < firstItemInFile; i++){
 			double xP = in.readDouble();
@@ -55,12 +54,11 @@ public class NBody{
 			StdDraw.pause(10);
 			
 		}
+
 		StdOut.printf("%d\n", ball.length);
 		StdOut.printf("%.2e\n", radius);
 		for (int i = 0; i < ball.length; i++) {
-  		  	StdOut.printf("%11.4e %11.4e %11.4e %11.4e %11.4e %12s\n",
-            ball[i].xxPos, ball[i].yyPos, ball[i].xxVel,
-            ball[i].yyVel, ball[i].mass, ball[i].imgFileName);   
+  		  	ball[i].printout();
 		}
 	}
 }
