@@ -55,8 +55,8 @@ public class NBody{
 		StdOut.printf("%.2e\n", radius);
 		for (int i = 0; i < ball.length; i++) {
   		  	StdOut.printf("%11.4e %11.4e %11.4e %11.4e %11.4e %12s\n",
-            xxPos, yyPos, xxVel,
-            yyVel, mass, imgFileName);   
+            ball[i].xxPos, ball[i].yyPos, ball[i].xxVel,
+            ball[i].yyVel, ball[i].mass, ball[i].imgFileName);   
 		}
 	}
 }
