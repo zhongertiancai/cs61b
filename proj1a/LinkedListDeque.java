@@ -1,0 +1,92 @@
+public class LinkedListDeque<T>{
+    public static int size;
+    public class Deque<T>{
+        public T item;
+        public Deque<T> prev;
+        public Deque<T> next;
+    }
+    public Deque<T> sentinel = new Deque<>();
+    private Deque<T> shadowsentinel = sentinel;
+    public LinkedListDeque(){
+
+        size = 0;
+        sentinel.prev = sentinel;
+        sentinel.next = sentinel;
+    }
+    public void addFirst(T item){
+        Deque<T> ptr = new Deque<>();
+        ptr.item = item;
+        ptr.next = sentinel.next;
+        ptr.prev = sentinel;
+        sentinel.next = ptr;
+        size++;
+    }
+    public void addLast(T item){
+        Deque<T> ptr = new Deque<>();
+        ptr.item = item;
+        ptr.prev = sentinel.prev;
+        ptr.next = sentinel;
+        sentinel.prev = ptr;
+        size++;
+    }
+    public boolean isEmpty(){
+        if(size == 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    public int size() {
+        return size;
+    }
+    public void printDeque(){
+        Deque<T> ptr = sentinel.next;
+        while(ptr != sentinel){
+            System.out.print(ptr.item + " ");
+            ptr = ptr.next;
+        }
+    }
+    public T removeFirst(){
+        if(isEmpty() == true){
+            return null;
+        }
+        Deque<T> ptr = sentinel.next;
+        sentinel.next = ptr.next;
+        ptr.next.prev = sentinel;
+        size--;
+        return ptr.item;
+    }
+    public T removeLast(){
+        if(isEmpty() == true){
+            return null;
+        }
+        Deque<T> ptr = sentinel.prev;
+        sentinel.prev = ptr.prev;
+        ptr.prev.next = sentinel;
+        size--;
+        return ptr.item;
+    }
+    public T get(int index){
+        Deque<T> ptr = sentinel.next;
+        for(int i = 0;i < index; i++){
+            if(ptr == sentinel){
+                return null;
+            }
+            ptr = ptr.next;
+        }
+        return ptr.item;
+    }
+    public T getRecursive(int index){
+        if(index >= size){
+            return null;
+        }
+        if (index == 0) {
+            T result = shadowsentinel.item;
+            shadowsentinel = sentinel;
+            return result;
+        }else{
+            shadowsentinel = shadowsentinel.next;
+            return getRecursive(index - 1);
+        }
+    }
+}
