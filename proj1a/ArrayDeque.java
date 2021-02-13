@@ -2,7 +2,7 @@ public class ArrayDeque<T> {
     private int size;
     private T[] items;
     private int nextFirst = 0;
-    private int nextLast = 0;
+    private int nextLast = 1;
     public ArrayDeque(){
         items =(T[])new Object[8];
         size = 0;
@@ -20,7 +20,7 @@ public class ArrayDeque<T> {
         }
         items = a;
         nextFirst = 0;
-        nextLast = size + 1;
+        nextLast = size;
     }
     public void addFirst(T item){
 
