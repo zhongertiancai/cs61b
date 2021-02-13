@@ -66,7 +66,7 @@ public class LinkedListDequeTest {
 		System.out.println("Running add/remove test.");
 
 
-		LinkedListDeque<Integer> lld1 = new LinkedListDeque<Integer>();
+		ArrayDeque<Integer> lld1 = new ArrayDeque<Integer>();
 		// should be empty 
 		boolean passed = checkEmpty(true, lld1.isEmpty());
 
