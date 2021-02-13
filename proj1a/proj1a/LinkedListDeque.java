@@ -1,11 +1,11 @@
 public class LinkedListDeque<T>{
-    public static int size;
-    public class Deque<T>{
+    private static int size;
+    private class Deque<T>{
         public T item;
         public Deque<T> prev;
         public Deque<T> next;
     }
-    public Deque<T> sentinel = new Deque<>();
+    private Deque<T> sentinel = new Deque<>();
     private Deque<T> shadowsentinel = sentinel;
     public LinkedListDeque(){
 
@@ -16,6 +16,7 @@ public class LinkedListDeque<T>{
     public void addFirst(T item){
         Deque<T> ptr = new Deque<>();
         ptr.item = item;
+        sentinel.next.prev = ptr;
         ptr.next = sentinel.next;
         ptr.prev = sentinel;
         sentinel.next = ptr;
@@ -24,6 +25,7 @@ public class LinkedListDeque<T>{
     public void addLast(T item){
         Deque<T> ptr = new Deque<>();
         ptr.item = item;
+        sentinel.prev.next = ptr;
         ptr.prev = sentinel.prev;
         ptr.next = sentinel;
         sentinel.prev = ptr;
