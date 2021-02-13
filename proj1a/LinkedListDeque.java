@@ -5,6 +5,7 @@ public class LinkedListDeque<T>{
         public Deque<T> prev;
         public Deque<T> next;
     }
+    private int flag = 1;
     private Deque<T> sentinel = new Deque<>();
     private Deque<T> shadowsentinel = sentinel;
     public LinkedListDeque(){
@@ -79,12 +80,17 @@ public class LinkedListDeque<T>{
         return ptr.item;
     }
     public T getRecursive(int index){
+        if(flag==1){
+            shadowsentinel=sentinel;
+            flag=0;
+        }
         if(index >= size){
             return null;
         }
         if (index == 0) {
-            T result = shadowsentinel.item;
+            T result = shadowsentinel.next.item;
             shadowsentinel = sentinel;
+            flag=1;
             return result;
         }else{
             shadowsentinel = shadowsentinel.next;
