@@ -128,20 +128,16 @@ public class IntList {
      * as an input, returns null.
      */
     public static IntList reverse(IntList A) {
-        if (A == null) {
-            return null;
-        }
-        IntList B = new IntList(A.first, null);
-        if (A.rest == null) {
-            return  B;
-        }
-        IntList result = reverse(A.rest);
-        IntList p = result;
-        while (p.rest != null) {
-            p = p.rest;
-        }
-        p.rest = B;
-        return result;
+        IntList frontOfReversed = null;
+        IntList nextNodeToAdd = A;
+        while (nextNodeToAdd != null) {
+            IntList remainderOfOriginal = nextNodeToAdd.rest;
+            nextNodeToAdd.rest = frontOfReversed;
+            frontOfReversed = nextNodeToAdd;
+            nextNodeToAdd = remainderOfOriginal;
+            }
+        A = frontOfReversed;
+        return A;
     }
 
 
