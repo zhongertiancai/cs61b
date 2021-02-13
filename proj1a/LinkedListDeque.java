@@ -1,11 +1,11 @@
 public class LinkedListDeque<T>{
-    public static int size;
-    public class Deque<T>{
+    private static int size;
+    private class Deque<T>{
         public T item;
         public Deque<T> prev;
         public Deque<T> next;
     }
-    public Deque<T> sentinel = new Deque<>();
+    private Deque<T> sentinel = new Deque<>();
     private Deque<T> shadowsentinel = sentinel;
     public LinkedListDeque(){
 
