@@ -14,13 +14,13 @@ public class ArrayDeque<T> {
         T[] a =(T[]) new Object[capacity];
         if(nextFirst > nextLast) {
             System.arraycopy(items, (nextFirst + 1) % items.length, a, 1, items.length - nextFirst - 1);
-            System.arraycopy(items, 0, a, items.length - nextFirst + 1, (nextLast + 1) % items.length);
+            System.arraycopy(items, 0, a, items.length - nextFirst, (nextLast + 1) % items.length);
         }else{
             System.arraycopy(items, (nextFirst+1) , a, 1, size);
         }
         items = a;
         nextFirst = 0;
-        nextLast = size;
+        nextLast = size+1;
     }
     public void addFirst(T item){
 
@@ -57,6 +57,9 @@ public class ArrayDeque<T> {
         }
     }
     public T removeFirst(){
+        if((nextFirst+1)%items.length==nextLast){
+            return null;
+        }
         nextFirst = (nextFirst + 1) % items.length;
         T result = items[nextFirst];
         size--;
@@ -66,6 +69,9 @@ public class ArrayDeque<T> {
         return result;
     }
     public T removeLast(){
+        if((nextFirst+1)%items.length==nextLast){
+            return null;
+        }
         nextLast--;
         if(nextLast < 0){
             nextLast += items.length;
