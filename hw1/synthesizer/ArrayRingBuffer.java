@@ -64,22 +64,7 @@ public class ArrayRingBuffer<T> extends AbstractBoundedQueue<T> {
      * throw new RuntimeException("Ring buffer underflow"). Exceptions
      * covered Monday.
      */
-    @Override
-    public boolean isEmpty() {
-        if (fillCount == 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-    @Override
-    public boolean isFull() {
-        if (capacity()  == fillCount()) {
-            return true;
-        } else {
-            return false;
-        }
-    }
+
     @Override
     public T dequeue() {
         if (fillCount == 0) {
@@ -97,7 +82,7 @@ public class ArrayRingBuffer<T> extends AbstractBoundedQueue<T> {
     @Override
     public T peek() {
         if (fillCount == 0) {
-            return null;
+            throw new RuntimeException("Ring Buffer Underflow");
         }
         return rb[first];
     }
