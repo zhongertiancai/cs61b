@@ -33,7 +33,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="byog.Core.Main" />
       <module name="proj2" />
-      <option name="PROGRAM_PARAMETERS" value="n1243s" />
+      <option name="PROGRAM_PARAMETERS" value="1243" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="byog.Core.*" />
