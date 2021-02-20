@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3dd58f95-9a83-4382-bbd8-bc839b50c4be" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/javalib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/javalib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/byog/Core/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/byog/Core/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/byog/Core/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/byog/Core/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/proj2/.idea/libraries/javalib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proj2/.idea/libraries/javalib.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/proj2/byog/Core/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proj2/byog/Core/Game.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,11 +29,11 @@
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.MemoryGame">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="byog.Core.Main" />
       <module name="proj2" />
-      <option name="PROGRAM_PARAMETERS" value="123" />
+      <option name="PROGRAM_PARAMETERS" value="n1243s" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="byog.Core.*" />
@@ -50,6 +47,7 @@
     <configuration name="MemoryGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="byog.lab6.MemoryGame" />
       <module name="proj2" />
+      <option name="PROGRAM_PARAMETERS" value="n123s" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="byog.lab6.*" />
@@ -80,8 +78,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MemoryGame" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.MemoryGame" />
         <item itemvalue="Application.RandomWorldDemo" />
       </list>
     </recent_temporary>
