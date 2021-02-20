@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3dd58f95-9a83-4382-bbd8-bc839b50c4be" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/byog/Core/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/byog/Core/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proj2/byog/Core/Game$Position.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proj2/byog/Core/Game$Position.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/proj2/byog/Core/Game$Room.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proj2/byog/Core/Game$Room.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/proj2/byog/Core/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/proj2/byog/Core/Game.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,7 +34,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="byog.Core.Main" />
       <module name="proj2" />
-      <option name="PROGRAM_PARAMETERS" value="1243" />
+      <option name="PROGRAM_PARAMETERS" value="n1243s" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="byog.Core.*" />
