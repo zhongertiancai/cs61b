@@ -8,7 +8,7 @@ public class Percolation {
     private int openSites;
     private WeightedQuickUnionUF myDisjoint;
     private WeightedQuickUnionUF myDisjoint2;
-    Percolation(int n) {
+    public Percolation(int n) {
         box = new int[n * n];
         for (int i = 0; i < box.length; i++) {
             box[i] = 0;
