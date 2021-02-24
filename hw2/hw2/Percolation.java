@@ -34,19 +34,19 @@ public class Percolation {
             myDisjoint.union(index(row, col), length * length + 1);
         }
         if (col != 0 && isOpen(row, col - 1)) {
-            myDisjoint2.union(index(row, col),index(row, col - 1));
-            myDisjoint.union(index(row, col),index(row, col - 1));
+            myDisjoint2.union(index(row, col), index(row, col - 1));
+            myDisjoint.union(index(row, col), index(row, col - 1));
         }
         if (col != length - 1 && isOpen(row, col + 1)) {
-            myDisjoint2.union(index(row, col),index(row, col + 1));
-            myDisjoint.union(index(row, col),index(row, col + 1));
+            myDisjoint2.union(index(row, col), index(row, col + 1));
+            myDisjoint.union(index(row, col), index(row, col + 1));
         }
         if (row != 0 && isOpen(row - 1, col)) {
-            myDisjoint2.union(index(row, col),index(row - 1, col));
-            myDisjoint.union(index(row, col),index(row - 1, col));
+            myDisjoint2.union(index(row, col), index(row - 1, col));
+            myDisjoint.union(index(row, col), index(row - 1, col));
         }
         if (row != length - 1 && isOpen(row + 1, col)) {
-            myDisjoint2.union(index(row, col),index(row + 1, col));
+            myDisjoint2.union(index(row, col), index(row + 1, col));
             myDisjoint.union(index(row, col), index(row + 1, col));
         }
     }
@@ -75,7 +75,7 @@ public class Percolation {
     }
     public static void main(String[] args) {
         PercolationFactory f = new PercolationFactory();
-        PercolationStats a = new PercolationStats(5,10,f);
+        PercolationStats a = new PercolationStats(20,10,f);
         System.out.println(a.mean());
         System.out.println(a.stddev());
         System.out.println(a.confidenceHigh());

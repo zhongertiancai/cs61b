@@ -11,7 +11,6 @@ public class PercolationStats {
         }
         Percolation p;
         ptr = new double[T];
-        double count = 0;
         int row, col;
         for (int i = 0; i < T; i++) {
             p = pf.make(N);
@@ -20,11 +19,9 @@ public class PercolationStats {
                 col = StdRandom.uniform(N);
                 if (!p.isOpen(row, col)) {
                     p.open(row, col);
-                    count += 1;
                 }
             }
-            ptr[i] = count;
-            count = 0;
+            ptr[i] = (double) p.numberOfOpenSites() / (N * N);
         }
     }
     public double mean() {
