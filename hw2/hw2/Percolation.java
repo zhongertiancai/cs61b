@@ -64,7 +64,7 @@ public class Percolation {
         return false;
     }
     public boolean percolates() {
-        if (myDisjoint.connected(length * length + 1, length * length)) {
+        if (myDisjoint.connected(length * length, length * length + 1)) {
             return true;
         } else {
             return false;
@@ -72,5 +72,13 @@ public class Percolation {
     }
     public int numberOfOpenSites() {
         return openSites;
+    }
+    public static void main(String[] args) {
+        PercolationFactory f = new PercolationFactory();
+        PercolationStats a = new PercolationStats(5,10,f);
+        System.out.println(a.mean());
+        System.out.println(a.stddev());
+        System.out.println(a.confidenceHigh());
+        System.out.println(a.confidenceLow());
     }
 }

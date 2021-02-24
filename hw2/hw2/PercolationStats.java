@@ -18,8 +18,10 @@ public class PercolationStats {
             while (p.percolates() == false) {
                 row = StdRandom.uniform(N);
                 col = StdRandom.uniform(N);
-                p.open(row, col);
-                count += 1;
+                if (!p.isOpen(row, col)) {
+                    p.open(row, col);
+                    count += 1;
+                }
             }
             ptr[i] = count;
             count = 0;
