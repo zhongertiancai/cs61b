@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2e0f276a-f337-4c3b-9ca2-bab37fdc143d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../proj2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proj2/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../proj2/byog/Core/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proj2/byog/Core/Game.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
+  <component name="ProjectId" id="1p4DrfOKs7uvxcpGgkqj0Dgyo9J" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../library-sp18/javalib" />
+    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager" selected="JUnit.ArrayHeap">
+    <configuration name="ArrayHeap" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab10" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ArrayHeap" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArrayHeap.testIndexing" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab10" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ArrayHeap" />
+      <option name="METHOD_NAME" value="testIndexing" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArrayHeap.testSink" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab10" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ArrayHeap" />
+      <option name="METHOD_NAME" value="testSink" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ArrayHeap.testSwim" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="lab10" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ArrayHeap" />
+      <option name="METHOD_NAME" value="testSwim" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ArrayHeap" />
+        <item itemvalue="JUnit.ArrayHeap.testSwim" />
+        <item itemvalue="JUnit.ArrayHeap.testSink" />
+        <item itemvalue="JUnit.ArrayHeap.testIndexing" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2e0f276a-f337-4c3b-9ca2-bab37fdc143d" name="Default Changelist" comment="" />
+      <created>1614433668646</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1614433668646</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
