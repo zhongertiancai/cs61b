@@ -40,22 +40,16 @@ public class TestComplexOomage {
     @Test
     public void testWithDeadlyParams() {
         List<Oomage> deadlyList = new ArrayList<>();
-
-        for (int i = 0; i < 1000; i += 1) {
-            List<Integer> params = new ArrayList<>();
-
-            for (int j = 0; j < 4; j += 1) { // Generates random integers for the first 32 bits
-                params.add(StdRandom.uniform(255));
+        for (int i = 0; i < 8; i += 1) {
+            ArrayList<Integer> color = new ArrayList<>();
+            for (int j = 0; j < i; j += 1) {
+                color.add(1);
             }
+            ComplexOomage co = new ComplexOomage(color);
+            deadlyList.add(co);
 
-            for (int j = 0; j < 4; j += 1) { // Add additional fixed 32 bits integers
-                params.add(j);
-            }
-
-            deadlyList.add(new ComplexOomage(params));
         }
-
-        assertTrue(OomageTestUtility.haveNiceHashCodeSpread(deadlyList, 10));
+        assertTrue(OomageTestUtility.haveNiceHashCodeSpread(deadlyList, 8));
     }
 
     /** Calls tests for SimpleOomage. */
