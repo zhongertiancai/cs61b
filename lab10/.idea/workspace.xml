@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2e0f276a-f337-4c3b-9ca2-bab37fdc143d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/ArrayHeap.java" beforeDir="false" afterPath="$PROJECT_DIR$/ArrayHeap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/lab10/ArrayHeap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/lab10/ArrayHeap.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proj2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../proj2/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../proj2/byog/Core/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/../proj2/byog/Core/Game.java" afterDir="false" />
     </list>
