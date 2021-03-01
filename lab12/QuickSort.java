@@ -78,7 +78,9 @@ public class QuickSort {
         } else {
             equal = catenate(equal, quickSort(greater));
         }
-        items = equal;
+        while (!equal.isEmpty()) {
+            items.enqueue(equal.dequeue());
+        }
         return items;
     }
     public static void main(String[] arg) {
@@ -91,7 +93,7 @@ public class QuickSort {
         students.enqueue("K");
         students.enqueue("C");
         students.enqueue("T");
-        students = QuickSort.quickSort(students);
+        QuickSort.quickSort(students);
         while (!students.isEmpty()) {
             System.out.println(students.dequeue());
         }

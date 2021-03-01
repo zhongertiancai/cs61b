@@ -89,7 +89,10 @@ public class MergeSort {
             prev = next;
             next = new Queue<>();
         }
-        items = prev.dequeue();
+        Queue<Item> itemsCopy = prev.dequeue();
+        while (!itemsCopy.isEmpty()) {
+            items.enqueue(itemsCopy.dequeue());
+        }
         return items;
     }
     public static void main(String[] arg) {
@@ -102,7 +105,7 @@ public class MergeSort {
         students.enqueue("K");
         students.enqueue("C");
         students.enqueue("T");
-        students = MergeSort.mergeSort(students);
+        MergeSort.mergeSort(students);
         while (!students.isEmpty()) {
             System.out.println(students.dequeue());
         }
