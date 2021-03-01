@@ -93,19 +93,23 @@ public class MergeSort {
             prev = next;
             next = new Queue<>();
         }
-        return items;
+        itemsCopy = prev.dequeue();
+        return itemsCopy;
     }
     public static void main(String[] arg) {
-        Queue<String> students = new Queue<String>();
-        students.enqueue("Alice");
-        students.enqueue("Vanessa");
-        students.enqueue("Ethan");
-        students.enqueue("B");
-        students.enqueue("Z");
-        students.enqueue("K");
-        students.enqueue("C");
-        students.enqueue("T");
-        MergeSort.mergeSort(students);
+        Queue<Integer> students = new Queue<>();
+        students.enqueue(8);
+        students.enqueue(2);
+        students.enqueue(0);
+        students.enqueue(1);
+        students.enqueue(3);
+        students.enqueue(4);
+        students.enqueue(6);
+        students.enqueue(0);
+        students.enqueue(2);
+        students.enqueue(3);
+        students = MergeSort.mergeSort(students);
+        //MergeSort.mergeSort(students);
         while (!students.isEmpty()) {
             System.out.println(students.dequeue());
         }
