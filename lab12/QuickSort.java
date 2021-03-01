@@ -78,7 +78,8 @@ public class QuickSort {
         } else {
             equal = catenate(equal, quickSort(greater));
         }
-        return equal;
+        items = equal;
+        return items;
     }
     public static void main(String[] arg) {
         Queue<String> students = new Queue<String>();
