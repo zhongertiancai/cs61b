@@ -8,12 +8,13 @@ public class SeamCarver {
     private int width;
     private int height;
     public SeamCarver(Picture picture) {
-        this.picture = picture;
+        this.picture = new Picture(picture);
         width = picture.width();
         height = picture.height();
+        calEnergy();
     }
     public Picture picture() {
-        return picture;
+        return new Picture(picture);
     }
     public int width() {
         return width;
@@ -36,14 +37,18 @@ public class SeamCarver {
         int by = up.getBlue() - down.getBlue();
         return rx * rx + gx * gx + bx * bx + ry * ry + gy * gy + by * by;
     }
-    public int[] findVerticalSeam() {
-        double[][] energy = new double[width][height];
-        double[][] M = new double[width][height];
+    private double[][] energy;
+    public void calEnergy() {
+        energy = new double[width][height];
         for (int i = 0; i < width; i++) {
             for (int j = 0; j < height; j++) {
                 energy[i][j] = energy(i, j);
             }
         }
+    }
+    public int[] findVerticalSeam() {
+        calEnergy();
+        double[][] M = new double[width][height];
         int[][] prev = new int[width][height];
         for (int i = 0; i < width; i++) {
             M[i][0] = energy[i][0];
@@ -89,13 +94,8 @@ public class SeamCarver {
 
 
     public int[] findHorizontalSeam() {
-        double[][] energy = new double[width][height];
+        calEnergy();
         double[][] M = new double[width][height];
-        for (int i = 0; i < width; i++) {
-            for (int j = 0; j < height; j++) {
-                energy[i][j] = energy(i, j);
-            }
-        }
         int[][] prev = new int[width][height];
         for (int i = 0; i < height; i++) {
             M[0][i] = energy[0][i];
