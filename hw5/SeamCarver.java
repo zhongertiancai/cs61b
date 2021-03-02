@@ -38,7 +38,7 @@ public class SeamCarver {
         return rx * rx + gx * gx + bx * bx + ry * ry + gy * gy + by * by;
     }
     private double[][] energy;
-    public void calEnergy() {
+    private void calEnergy() {
         energy = new double[width][height];
         for (int i = 0; i < width; i++) {
             for (int j = 0; j < height; j++) {
