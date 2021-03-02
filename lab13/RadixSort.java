@@ -49,7 +49,7 @@ public class RadixSort {
             if (asciis[i].length() - 1 < index) {
                 item = 0;
             } else {
-                item = asciis[i].charAt(index);
+                item = asciis[i].charAt(asciis1[i].length() - 1 - index);
             }
             counts[item]++;
         }
@@ -64,7 +64,7 @@ public class RadixSort {
             if (asciis1[i].length() - 1 < index) {
                 item = 0;
             } else {
-                item = asciis1[i].charAt(index);
+                item = asciis1[i].charAt(asciis1[i].length() - 1 - index);
             }
             int place = starts[item];
             asciis[place] = s;
@@ -90,10 +90,10 @@ public class RadixSort {
     /*public static void main(String[] arg) {
         String[] s = new String[5];
         String[] s2= new String[5];
-        s[0] = new String("abc");
-        s[1] = new String("bc");
-        s[2] = new String("qs");
-        s[3] = new String("hd");
+        s[0] = new String("zabc");
+        s[1] = new String("zabb");
+        s[2] = new String("asda");
+        s[3] = new String("hdkt");
         s[4] = new String("wdkowk");
         s2 = sort(s);
         for (String k : s2) {
