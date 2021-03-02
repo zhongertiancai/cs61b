@@ -24,10 +24,9 @@ public class RadixSort {
                 maxLen = asciis[i].length();
             }
         }
-        for (int i = 0; i < maxLen; i++) {
+        for (int i = maxLen - 1; i >= 0; i--) {
             sortHelperLSD(sorted, i);
         }
-        // TODO: Implement LSD Sort
         return sorted;
     }
 
@@ -49,7 +48,7 @@ public class RadixSort {
             if (asciis[i].length() - 1 < index) {
                 item = 0;
             } else {
-                item = asciis[i].charAt(asciis1[i].length() - 1 - index);
+                item = asciis[i].charAt(index);
             }
             counts[item]++;
         }
@@ -64,7 +63,7 @@ public class RadixSort {
             if (asciis1[i].length() - 1 < index) {
                 item = 0;
             } else {
-                item = asciis1[i].charAt(asciis1[i].length() - 1 - index);
+                item = asciis1[i].charAt(index);
             }
             int place = starts[item];
             asciis[place] = s;
@@ -87,18 +86,23 @@ public class RadixSort {
         // Optional MSD helper method for optional MSD radix sort
         return;
     }
-    /*public static void main(String[] arg) {
-        String[] s = new String[5];
-        String[] s2= new String[5];
-        s[0] = new String("zabc");
-        s[1] = new String("zabb");
-        s[2] = new String("asda");
-        s[3] = new String("hdkt");
-        s[4] = new String("wdkowk");
+    public static void main(String[] arg) {
+        String[] s = new String[10];
+        String[] s2;
+        s[0] = new String("219");
+        s[1] = new String("134");
+        s[2] = new String("207");
+        s[3] = new String("135");
+        s[4] = new String("124");
+        s[5] = new String("146");
+        s[6] = new String("160");
+        s[7] = new String("61");
+        s[8] = new String("96");
+        s[9] = new String("148");
         s2 = sort(s);
         for (String k : s2) {
             System.out.println(k);
         }
         return;
-    }*/
+    }
 }
