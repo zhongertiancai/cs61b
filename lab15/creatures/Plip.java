@@ -7,6 +7,7 @@ import huglife.HugLifeUtils;
 import java.awt.Color;
 import java.util.Map;
 import java.util.List;
+import java.util.Random;
 
 /** An implementation of a motile pacifist photosynthesizer.
  *  @author Josh Hug
@@ -23,9 +24,9 @@ public class Plip extends Creature {
     /** creates plip with energy equal to E. */
     public Plip(double e) {
         super("plip");
-        r = 0;
-        g = 0;
-        b = 0;
+        r = 99;
+        g = 63;
+        b = 76;
         energy = e;
     }
 
@@ -43,6 +44,7 @@ public class Plip extends Creature {
      */
     public Color color() {
         g = 63;
+        g = (int)(energy / 2 * (255 - 63)) + 63;
         return color(r, g, b);
     }
 
@@ -55,11 +57,16 @@ public class Plip extends Creature {
      *  private static final variable. This is not required for this lab.
      */
     public void move() {
+        energy = energy - 0.15;
     }
 
 
     /** Plips gain 0.2 energy when staying due to photosynthesis. */
     public void stay() {
+        energy = energy + 0.2;
+        if (energy > 2) {
+            energy = 2;
+        }
     }
 
     /** Plips and their offspring each get 50% of the energy, with none
@@ -67,7 +74,8 @@ public class Plip extends Creature {
      *  Plip.
      */
     public Plip replicate() {
-        return this;
+        energy /= 2;
+        return new Plip(2);
     }
 
     /** Plips take exactly the following actions based on NEIGHBORS:
@@ -81,7 +89,26 @@ public class Plip extends Creature {
      *  for an example to follow.
      */
     public Action chooseAction(Map<Direction, Occupant> neighbors) {
+        List<Direction> empties = getNeighborsOfType(neighbors, "empty");
+        if (energy >= 1) {
+            if (empties.size() == 1) {
+                Direction moveDir = empties.get(0);
+                return new Action(Action.ActionType.REPLICATE, moveDir);
+            }
+
+            if (empties.size() > 1) {
+                Direction moveDir = HugLifeUtils.randomEntry(empties);
+                return new Action(Action.ActionType.REPLICATE, moveDir);
+            }
+        }
+        if (empties.size() == 1) {
+            Direction moveDir = empties.get(0);
+            return new Action(Action.ActionType.MOVE, moveDir);
+        }
+        if (empties.size() > 1) {
+            Direction moveDir = HugLifeUtils.randomEntry(empties);
+            return new Action(Action.ActionType.MOVE, moveDir);
+        }
         return new Action(Action.ActionType.STAY);
     }
-
 }

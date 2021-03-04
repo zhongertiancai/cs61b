@@ -36,15 +36,17 @@ public class TestPlip {
 
     @Test
     public void testReplicate() {
-
+        Plip p = new Plip(2);
+        Plip p1 = p.replicate();
+        assertNotSame(p, p1);
     }
 
-    //@Test
+    @Test
     public void testChoose() {
         Plip p = new Plip(1.2);
         HashMap<Direction, Occupant> surrounded = new HashMap<Direction, Occupant>();
         surrounded.put(Direction.TOP, new Impassible());
-        surrounded.put(Direction.BOTTOM, new Impassible());
+        surrounded.put(Direction.BOTTOM, new Empty());
         surrounded.put(Direction.LEFT, new Impassible());
         surrounded.put(Direction.RIGHT, new Impassible());
 
@@ -53,7 +55,7 @@ public class TestPlip {
         //Sorry!  
 
         Action actual = p.chooseAction(surrounded);
-        Action expected = new Action(Action.ActionType.STAY);
+        Action expected = new Action(Action.ActionType.REPLICATE, Direction.BOTTOM);
 
         assertEquals(expected, actual);
     }
